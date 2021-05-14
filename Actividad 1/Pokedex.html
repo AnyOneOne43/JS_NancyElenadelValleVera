@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script>
+      class Pokemon {
+        constructor(nombre, naturaleza, tipo, vida, ataque, defensa, velocidad, nivel){
+          this.nombre = nombre;
+          this.naturaleza = naturaleza;
+          this.tipo = tipo;
+          this.vida = vida;
+          this.ataque = ataque;
+          this.defensa = defensa;
+          this.velocidad = velocidad;
+          this.nivel = nivel;
+        }
+        
+        lvlup(){
+          if(this.nivel<100){
+            console.log('Su Pokemon ha subido de nivel');
+            this.nivel++;
+            if(this.naturaleza=='Audaz'){
+              this.ataque++;
+              console.log('Ataque ha aumentado a: '+this.ataque);
+            }
+            else if(this.naturaleza=='Osada'){
+              this.defensa++;
+              console.log('Defensa ha aumentado a: '+this.defensa);
+            }
+            else if(this.naturaleza=='Cauta'){
+              this.vida++;
+              console.log('Vida ha aumentado a: '+this.vida);
+            }
+            else if(this.naturaleza=='Alegre'){
+              this.velocidad++;
+              console.log('Velocidad ha aumentado a: '+this.velocidad);
+            }
+            else{
+              console.log('Su pokemon es de una naturaleza muy extraña asi que sus estadisticas no han aumentado');
+            }
+            }
+            else{
+              console.log('Su Pokemon ha alacanzado el nivel maximo. Espere proximas actualizaciones');
+            }
+            console.log(this.nombre+' esta en el nivel '+this.nivel);
+          
+          };
+        
+        Presentarse(){
+          console.log('Hola me llamo '+this.nombre+', soy tipo '+this.tipo+' y estoy en el nivel '+this.nivel);
+        };
+        
+        Suma(){
+          let suma=this.vida+this.ataque+this.defensa+this.velocidad;
+          console.log('La suma de las estadisticas de '+this.nombre+' es '+suma);
+        };
+        
+        Promedio(){
+          let prom=(this.vida+this.ataque+this.defensa+this.velocidad)/5;
+          console.log('El promedio de las estadisticas de '+this.nombre+' es '+prom);
+        }
+      }
+      
+      const Pk1 = new Pokemon('Puchamon','Alegre', 'Tormenta',10,11,13,3,79);
+      
+      const Pk2 = new Pokemon('Vala','Audaz', 'Fuego',5,7,9,3,2);
+      
+      const Pk3 = new Pokemon('Nico','Osada', 'Hades',10,11,13,6,33);
+      
+      const Pk4 = new Pokemon('Junette','Cauta', 'Agua',1,11,3,7,45);
+      
+      const Pk5 = new Pokemon('Kiki','Godness','Dios',100,100,100,100,99);
+      
+    </script>
+  </body>
+</html>
