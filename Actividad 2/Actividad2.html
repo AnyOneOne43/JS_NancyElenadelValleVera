@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script>
+      const larTab = Math.floor(Math.random()*10)+1;
+      console.log(larTab);
+      const longTab = Math.floor(Math.random()*10)+1;
+      console.log(longTab);
+      let gusanito = [];
+      
+      for(let i=0; i<larTab;i++){
+        gusanito[i]=new Array();
+        for(let j=0; j<longTab;j++){
+          gusanito[i].push(0);
+        }
+      }
+      var n=1;
+      var o=0;
+      for(let indice in gusanito){
+        for(let ind in gusanito[indice]){
+            gusanito[indice][ind]=n;
+            let r=n;
+            n+=o;
+            o=r;
+        }
+        if(indice%2!=0){
+          gusanito[indice].reverse();
+        }
+      }
+      
+      console.log(gusanito);
+    </script>
+  </body>
+</html>
