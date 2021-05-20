@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link/>
+  </head>
+  <body>
+    <img src="./statics/Caminos.jpeg">
+     <script src="script.js"></script>
+     <script>
+         function obtenercookie(nombrecookie){
+            let cookies = document.cookie;
+            let arreglo = cookies.split('; ');
+            for(const valor of arreglo){
+                const cookie=valor.split('=')
+                if(cookie[0]===nombrecookie){
+                    return cookie[1];
+                }
+            }
+
+        }
+        direccion=obtenercookie('direccion');
+        camino=obtenercookie('camino');
+
+        if(direccion=="Izquierda"){
+            if(camino=="Izquierda"){
+                location.href = "Casa.html";
+            }
+            else if(camino=="Derecha"){
+                location.href = "Arbol.html";
+            } 
+        }
+        else if(direccion=="Derecha"){
+            if(camino=="Izquierda"){
+                location.href ="Hongo.html";
+            }
+            else if(camino=="Derecha"){
+                location.href ="Bruja.html";
+            }
+        }
+        
+     </script>
+
+  </body>
+</html>
