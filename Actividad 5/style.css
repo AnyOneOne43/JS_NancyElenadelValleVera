@@ -1,0 +1,60 @@
+h1{
+    text-align: center;
+  }
+  #boton{
+    text-align: center;
+    position: absolute;
+    left: 45%;
+    background-color:#FA8827;
+    width: 100px;
+    height: 30px;
+    border:5px solid;
+    display: block;
+  }
+  #cuadradito{
+    position: absolute;
+    left:37.5%;
+    width:300px;
+    height: 300px;
+    padding: 30px;
+    margin: 60px;
+    background:#7C7E8A;
+    display: block;
+  }
+  #amarillo{
+    float: left;
+    background-color:#EBD22F;
+    width: 50%;
+    height: 50%;
+  }
+  #verde{
+    float: right;
+    background-color:#31C461;
+    width: 50%;
+    height: 50%;
+  }
+  #rojo{
+    float: left;
+    background-color:#E33238;
+    width: 50%;
+    height: 50%;
+  }
+  #azul{
+    float: right;
+    background-color:#343FF5;
+    width: 50%;
+    height: 50%;
+  }
+  
+  #amarillo:hover{
+    background-color:#fcea72;
+  }
+  #verde:hover{
+    background-color:#56fc8c;
+  }
+  #rojo:hover{
+    background-color:#fa5f64;
+  }
+  #azul:hover{
+    background-color:#7d84ff;
+  }
