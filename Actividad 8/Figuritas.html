@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1>Figuritas y Colores UwU</h1>
+    <br>
+    <div id="espacio">
+        <div id="dibujo">
+            <canvas id="myCanvas" width="480px" height="460px"></canvas>
+        </div>
+        <div id="especificaciones">
+            Color de Fondo:<input id="Color" type="color" value="#BD1466">
+            <br><br>
+            <a id="letras">Color de Fondo:</a><input id="Gradiente" type="color" value="#BD1466">
+            <br><br>
+            <br><br>
+            Coloreado:
+            <select id="tipo" name="Color">
+                <option value="1">Color Solido</option>
+                <option value="2">Degradado Lineal</option>
+                <option value="3">Degradado Radial</option>
+            </select>
+            <br><br>
+            <br><br><br>
+            Figura:
+            <select id="figura" name="Figura">
+                <option value="1">Estrella</option>
+                <option value="2">Micky Mouse</option>
+                <option value="3">Icono</option>
+            </select>
+            <br><br>
+            <br><br><br>
+            <input type="submit" id="Draw" value="Dibujar">
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
